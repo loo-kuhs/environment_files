@@ -21,7 +21,7 @@ function Get-ImageInfo {
     $stream = New-Object System.IO.FileStream($path, [System.IO.FileMode]::Open)
     $image = [System.Drawing.Image]::FromStream($stream)
     $width = $image.Width
-    $height = $image.
+    $height = $image.Height
 
     [PSCustomObject]@{
       Width  = $width

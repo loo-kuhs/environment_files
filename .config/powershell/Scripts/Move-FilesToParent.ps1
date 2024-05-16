@@ -21,8 +21,6 @@ function Move-FilesToParent {
     $confirmation = Read-Host "Are you sure you want to continue? (Y/N)"
 
     if ($confirmation -eq 'Y') {
-        # Comprobe if the subdirectories are not empty and move the files to the parent directory and delete the subdirectories
-
         try {
             # Create log with the full path of the files to move
             Get-ChildItem -Recurse -File | Select-Object -ExpandProperty FullName | Out-File -FilePath "__FilesToMove.txt"
@@ -31,8 +29,6 @@ function Move-FilesToParent {
             # Move the files to the parent directory
             Get-ChildItem -Recurse -File | Move-Item -Destination (Get-Location).Path
             Get-ChildItem -Recurse | Where-Object { $_.PSIsContainer -and ($_.GetFileSystemInfos().Count -eq 0) } | Remove-Item
-        
-            
             
             Write-Host "The files have been moved to the parent directory and the subdirectories have been removed" -ForegroundColor Green
     
@@ -45,5 +41,4 @@ function Move-FilesToParent {
         Write-Host "Operation canceled" -ForegroundColor Yellow
         return
     }
-
 }
