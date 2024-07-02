@@ -10,15 +10,21 @@ Import-Module -Name Terminal-Icons
   # Primary functions
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Get-FileInfo.ps1
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Get-ImageInfo.ps1
+Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Get-VideoInfo.ps1
   # Secondary functions
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Get-TotalFiles.ps1
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-ImagesBySize.ps1
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Move-FilesToParent.ps1
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-ImagesByHeight.ps1
+Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-VideosByLength.ps1
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-FilesByExtension.ps1
+Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-FilesByInputName.ps1
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-ImagesByResolution.ps1
-  # Miscellaneous functions
+Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Rename-FilesSequentially.ps1
+# Miscellaneous functions
 Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Get-TikTokVideo.ps1
+Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Search-InHistory.ps1
+Import-Module -Name $env:USERPROFILE\.config\powershell\Scripts\Set-MyFilesByFolderName.ps1
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs

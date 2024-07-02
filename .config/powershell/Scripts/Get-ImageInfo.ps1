@@ -22,10 +22,12 @@ function Get-ImageInfo {
     $image = [System.Drawing.Image]::FromStream($stream)
     $width = $image.Width
     $height = $image.Height
+    $created = (Get-Item $path).CreationTime
 
     [PSCustomObject]@{
       Width  = $width
       Height = $height
+      CreatedAt = $created
     }
   }
   catch {
